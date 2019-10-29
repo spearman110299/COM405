@@ -18,6 +18,12 @@ public class Car {
         carnumber = carnumberIn;
         carcolor = carcolorIn;
     }
-    
-            
+    public int getCarNumber()
+    {
+        return carnumber;
+    }
+    public String getCarColor()
+    {
+        return carcolor;
+    }
 }
