@@ -52,8 +52,23 @@ public class CarPark {
                  }
              }
          }
+    
         return null;
     }
+    public int getEmptySpaces()
+        {
+            int tally = 0;
+            
+             for (int i = 0; i < carpark.length; i++)
+             {
+                 if(carpark[i] == null)
+                 {
+                     tally++;
+                 }
+             }
+             return tally;
+    }
+    
     
     
     
