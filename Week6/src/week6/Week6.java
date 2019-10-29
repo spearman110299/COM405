@@ -28,7 +28,7 @@ public class Week6 {
                 c1.addCar( new Car(543,"White") );
                 c1.addCar( new Car(431,"Black") );
                 c1.addCar( new Car(133,"Grey") );
-            Scanner scanIn = new Scanner(System.in);
+                Scanner scanIn = new Scanner(System.in);
                 
 
         
