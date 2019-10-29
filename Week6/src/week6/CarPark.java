@@ -10,25 +10,37 @@ package week6;
  * @author 4pears91
  */
 public class CarPark {
+
     private Car[] carpark;
-    
-    public CarPark()
-    {
+
+    public CarPark() {
         carpark = new Car[15];
     }
+
+    public boolean addCar(Car carIn) {
+        for (int i = 0; i < carpark.length; i++) {
+            if (carpark[i] == null) {
+                carpark[i] = carIn;
+                return true;
+            }
+        }
+        return false;
+    }
     
-      public boolean addCar(Car carIn)
-{
-for( int i = 0; i < carpark.length; i++)
-{
-if(carpark[i] == null)
-{
-carpark[i] = carIn;
-return true;
-}
-}
-return false;
 
+    public boolean removeCar(int carIn) {
+        for (int i = 0; i < carpark.length; i++) {
+            if (carpark[i] != null) {
+                int carid = carpark[i].getCarNumber();
+                if (carid == carIn) {
+                    carpark[i] = null;
+                    return true;
+                }
+            }
+        }
+        return false;
+        
+        
 
-
+    }
 }
