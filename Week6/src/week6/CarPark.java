@@ -39,8 +39,22 @@ public class CarPark {
             }
         }
         return false;
-        
-        
-
     }
+    
+    public Car getCar(int CarNumber){
+         for (int i = 0; i < carpark.length; i++)
+         {
+             if(carpark[i] != null)
+             {
+                 if (CarNumber == carpark[i].getCarNumber())
+                 {
+                     return carpark[i];
+                 }
+             }
+         }
+        return null;
+    }
+    
+    
+    
 }
