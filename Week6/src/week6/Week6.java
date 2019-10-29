@@ -5,6 +5,8 @@
  */
 package week6;
 
+import java.util.Scanner;
+
 /**
  *
  * @author 4pears91
@@ -26,16 +28,45 @@ public class Week6 {
                 c1.addCar( new Car(543,"White") );
                 c1.addCar( new Car(431,"Black") );
                 c1.addCar( new Car(133,"Grey") );
+            Scanner scanIn = new Scanner(System.in);
+                
 
         
         
         while(state == 1)
         { 
             
+            System.out.println("Please enter one of the following options");
+            System.out.println("A - Add a car");
+            System.out.println("B Remove a Car");
+            System.out.println("C View number of Empty spaces");
+            System.out.println("X - Exit");
             
+            String input =scanIn.nextLine();
+            
+            if (input.toLowerCase().equals("a"))
+            {
+                System.out.println("You have Chosen to add a car\n Please Enter a Car Number:");
+               
+                
+                    
+                
+            }
+            else if (input.toLowerCase().equals("b"))
+            {
+                System.out.println("You have chosen to remove a car");
+            }
+            else if (input.toLowerCase().equals("c"))
+            {
+                System.out.println("Empty Spaces");
+            }
+            else if (input.toLowerCase().equals("x"))
+            {
+                state = 0;
+            }
             
         }
-    
+    scanIn.close();
 }
     
 }
