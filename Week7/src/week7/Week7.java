@@ -15,7 +15,11 @@ public class Week7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Manager m1 = new Manager("bill", 70000, 30, 40, 25);
+        Admin a1 = new Admin("ben", 20000, 25, 40);
+        a1.setManager(m1);
+        
+        
     }
     
 }

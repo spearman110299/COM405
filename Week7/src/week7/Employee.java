@@ -11,11 +11,11 @@ package week7;
  */
 public class Employee {
     protected String name;
-    protected int payrate;
+    protected double payrate;
     protected int reqhours;
     protected int entholidays;
 
-    public Employee(String nameIn, int payrateIn, int reqhoursIn, int entholidaysIn)
+    public Employee(String nameIn, double payrateIn, int reqhoursIn, int entholidaysIn)
     {
         name = nameIn;
         payrate = payrateIn;
@@ -29,7 +29,7 @@ public class Employee {
     {
         return name;
     }
-    public int getPayRate()
+    public double getPayRate()
     {
         return payrate;
     }
@@ -43,35 +43,45 @@ public class Employee {
     }
     
     
-    public int BookHoliday(int reduceby)
+    public boolean BookHoliday(int reduceby)
     {
         
         
         if(entholidays-reduceby>0)
         {
             entholidays=entholidays-reduceby;
+            return true;
             //entholidays -= reduceby;
         }
-        else
-        {
-            System.out.println("This employee has no holidays left");
-        }
-        return entholidays;
+        return false;
+        
     }
     
-    public int changePayrate(int newpayrate)
+    public void setPayrate(double payrateIn)
        
         {
-             payrate = newpayrate;  
-             return payrate;
+             payrate = payrateIn;  
+             
         }
-    
-    public int viewyearlySalary()
+    public boolean SetHours(int reqhoursIn)
+    {
+        if(reqhoursIn <=40)
+        {
+            reqhours = reqhoursIn;
+            return true;
+        }
+        return false;
+    }
+   
+    public double viewyearlySalary()
         
         {
-            int yearlysalary = payrate;
-            return yearlysalary;
+            return payrate;
         }
+    public String getDetails()
+    {
+        return name + " " + entholidays + " " + viewyearlySalary();
+    }
     
     
 }
