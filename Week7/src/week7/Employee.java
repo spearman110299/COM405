@@ -56,9 +56,22 @@ public class Employee {
         {
             System.out.println("This employee has no holidays left");
         }
-        return 0;
+        return entholidays;
     }
     
+    public int changePayrate(int newpayrate)
+       
+        {
+             payrate = newpayrate;  
+             return payrate;
+        }
+    
+    public int viewyearlySalary()
+        
+        {
+            int yearlysalary = payrate;
+            return yearlysalary;
+        }
     
     
 }
