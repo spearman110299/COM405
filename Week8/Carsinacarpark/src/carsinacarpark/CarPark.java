@@ -38,7 +38,7 @@ public class CarPark
         {
             if(parkedcars[i] != null)
             {
-                if(parkedcars[i].getReg().equals(reg))
+                if(parkedcars[i].getRegistrationNumber().equals(reg))
                 {
                     parkedcars[i] = null;
                     return true;
