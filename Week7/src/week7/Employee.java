@@ -9,7 +9,7 @@ package week7;
  *
  * @author 4pears91
  */
-public class Employee {
+public abstract class Employee {
     protected String name;
     protected double payrate;
     protected int reqhours;
@@ -73,11 +73,9 @@ public class Employee {
         return false;
     }
    
-    public double viewyearlySalary()
+    public abstract double viewyearlySalary();
         
-        {
-            return payrate;
-        }
+      
     public String getDetails()
     {
         return name + " " + entholidays + " " + viewyearlySalary();

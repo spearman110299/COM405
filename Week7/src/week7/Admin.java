@@ -42,4 +42,9 @@ public class Admin extends Employee {
     }
       return ret;
     }
+
+    @Override
+    public double viewyearlySalary() {
+          return (payrate * reqhours) * 52;
+    }
 }
